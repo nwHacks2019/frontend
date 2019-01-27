@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { GiveComponent } from './give/give.component';
 import { SeekComponent } from './seek/seek.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -14,11 +17,14 @@ import { SeekComponent } from './seek/seek.component';
     AppComponent,
     HeaderComponent,
     GiveComponent,
-    SeekComponent
+    SeekComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

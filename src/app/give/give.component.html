@@ -7,28 +7,32 @@
           <br>
           <h5>List your item here. Your giving will be matched by someone in urgent need of that item.</h5>
             
-          <form id="contact-form" method="post" action="contact.php" role="form">
-                <div class="messages"></div>
+          <form #giverForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+
+          <!-- <form id="contact-form" method="post" action="contact.php" role="form"> -->
+           <!-- {{ giverForm.value | json}} -->
+           <!-- {{userModel | json}} -->
+            <div class="messages"></div>
                 <div class="controls">
-                    <div class="row">
+                    <div class="row" ngModelGroup="user">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_name">Name *</label>
-                                <input id="form_name" type="text" name="surname" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                                <input id="form_name" type="text" [(ngModel)]="userModel.name" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" [(ngModel)]="userModel.email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <label for="form_phone">Phone</label>
-                                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone number">
+                                <label for="form_location">Location</label>
+                                <input id="form_location" type="text" [(ngModel)]="userModel.location" name="location" class="form-control" placeholder="Please enter your location*">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -40,7 +44,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_message">Message *</label>
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
+                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -62,5 +66,32 @@
                 </div>
             </form>
         </div>
+        
       </div>
 </div>
+
+
+<div class="container-fluid">
+    <div class="col-xs-6">
+        <h3 align="center">Today, you gave...</h3>
+        <div *ngFor="let giverArray of giverArrayHack">
+            <ul class="list-group">
+                <li class="list-group-item">{{ giverArray }} </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+
+<div class="container-fluid">
+  <div class="col-xs-6">
+      <h3 align="center">Others have given... </h3>
+      <div *ngFor="let info of Infos$">
+          <ul class="list-group">
+              <li class="list-group-item">{{ info.item }}</li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+
