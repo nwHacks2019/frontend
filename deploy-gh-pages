@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Building page for deployment..."
+ng build --prod --output-path docs --base-href /frontend/
+
+echo "Creating redirect page..."
+cp docs/index.html docs/404.html
+
+echo "Build complete. Commit and push the changes to the docs/ directory to finish deployment."
