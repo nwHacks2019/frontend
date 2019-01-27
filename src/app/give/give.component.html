@@ -8,7 +8,6 @@
           <h5>List your item here. Your giving will be matched by someone in urgent need of that item.</h5>
             
           <form #giverForm="ngForm" novalidate (ngSubmit)="onSubmit()">
-
           <!-- <form id="contact-form" method="post" action="contact.php" role="form"> -->
            <!-- {{ giverForm.value | json}} -->
            <!-- {{userModel | json}} -->
@@ -18,21 +17,21 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_name">Name *</label>
-                                <input id="form_name" type="text" [(ngModel)]="userModel.name" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                                <input id="form_name" type="text" [(ngModel)]="userModel.username" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" [(ngModel)]="userModel.email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" [(ngModel)]="userModel.useremail" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_location">Location</label>
-                                <input id="form_location" type="text" [(ngModel)]="userModel.location" name="location" class="form-control" placeholder="Please enter your location*">
+                                <input id="form_location" type="text" [(ngModel)]="userModel.userlocation" name="location" class="form-control" placeholder="Please enter your location*">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
