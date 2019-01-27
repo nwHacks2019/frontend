@@ -10,9 +10,9 @@
 
 
 export class Info {
-    username: string;
-    useremail: string;
-    userlocation: string;
+    user_name: string;
+    user_email: string;
+    user_location: string;
     item: string;
     quantity: number;
     id: string;

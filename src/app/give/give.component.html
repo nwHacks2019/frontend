@@ -17,21 +17,21 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_name">Name *</label>
-                                <input id="form_name" type="text" [(ngModel)]="userModel.username" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                                <input id="form_name" type="text" [(ngModel)]="userModel.user_name" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" [(ngModel)]="userModel.useremail" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" [(ngModel)]="userModel.user_email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_location">Location</label>
-                                <input id="form_location" type="text" [(ngModel)]="userModel.userlocation" name="location" class="form-control" placeholder="Please enter your location*">
+                                <input id="form_location" type="text" [(ngModel)]="userModel.user_location" name="location" class="form-control" placeholder="Please enter your location*">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -42,8 +42,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="form_message">Message *</label>
-                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
+                            <label for="form_message">Item *</label>
+                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Item you are giving *" rows="4" required="required" data-error="send a message."></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -69,19 +69,35 @@
       </div>
 </div>
 
-
+<!-- HACKED TOGETHER -->
 <div class="container-fluid">
     <div class="col-xs-6">
         <h3 align="center">Today, you gave...</h3>
         <div *ngFor="let giverArray of giverArrayHack">
-            <ul class="list-group">
-                <li class="list-group-item">{{ giverArray }} </li>
+            <ul class="list-group" *ngFor="let giverArray of giverArrayHack">
+                <li class="list-group-item list-group-item-success">{{ giverArray }} - <b>Congrats! You have been matched!</b> Seeker name: Jess K. Email: jessk@giveandseek.com</li>
             </ul>
         </div>
     </div>
   </div>
 
+<!-- HACKED END -->
 
+<!-- USING SERVER -->
+<!-- <div class="container-fluid">
+    <div class="col-xs-6">
+        <h3 align="center">Today, you gave...</h3>  
+        <div *ngFor="let giverInfo of giveInfo$?.data">
+            <ul class="list-group">
+                    {{giverInfo}} 
+                <li class="list-group-item">{{giverInfo | json}} </li>
+            </ul>
+        </div>
+    </div>
+  </div> -->
+
+
+<!-- USING SERVER END -->
 <div class="container-fluid">
   <div class="col-xs-6">
       <h3 align="center">Others have given... </h3>

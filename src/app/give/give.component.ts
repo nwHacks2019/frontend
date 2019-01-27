@@ -13,23 +13,26 @@ import { GivePost } from './givepost.model';
 export class GiveComponent implements OnInit {
 
   Infos$: Info[];
+  giveInfo$: GivePost[];
+
   constructor(private dataService: DataService) { }
-  userModel = new GivePost('anmol', 'hi', 'yo', 'dd', 7 , 'vv', 'd', 'd');
+  userModel = new GivePost('', '', '', '', 1 , '', '', '');
   // userModel = new GivePost('Anmol', 'anmol@gmail.com', 'vancouver', 'towls');
   giverArrayHack: string[] = [];
   ngOnInit() {
     return this.dataService.getInfo()
     .subscribe(data => this.Infos$ = data);
-
    }
+
    onSubmit() {
      console.log(this.userModel);
      this.dataService.postInfo(this.userModel)
       .subscribe(
-        data => console.log('Success!', data),
-        error => console.log('Error', error)
-        );
+        // response => console.log('Success!', data),
+        data => this.giveInfo$ = data);
+        // error => console.log('Error', error)
+        // );
       this.giverArrayHack.push(this.userModel.item);
-      this.userModel.item = '';
+      console.log(this.Infos$);
    }
 }

@@ -7,10 +7,15 @@ import { Info } from '../info.model';
 })
 export class DataService {
 
-  apiUrl = 'http://giveseek.appspot.com/give';
+  // apiUrl = 'http://giveseek.appspot.com/ask';
+  apiUrl = 'http://localhost:3000/ask';
   constructor(private _http: HttpClient) { }
 
   getInfo() {
     return this._http.get<Info[]>(this.apiUrl);
   }
+  postInfo(seekPost: Info) {
+    return this._http.post<Info[]>(this.apiUrl, seekPost);
+  }
+
 }
