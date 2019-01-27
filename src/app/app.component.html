@@ -20,8 +20,43 @@
 
 <router-outlet></router-outlet> -->
 
-<div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-secondary">Left</button>
-  <button type="button" class="btn btn-secondary">Middle</button>
-  <button type="button" class="btn btn-secondary">Right</button>
+<app-header></app-header>
+
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Give and Seek, directly.</h1>
+          <p class="lead">Connective givers and seekers. All around the world, in times of need. No catch.</p>
+        </div>
+      </div>
+      
+      
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Give</a>, with an open heart</h5>
+                <p class="card-text">Directly help the people in need.</p>
+                <a href="#" class="btn btn-primary" (click)="onClickStartGiving()">Start Giving</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">Seek</a>, with no hesitation</h5>
+                <p class="card-text">Request essential supplies from people around you.</p>
+                <a href="#" class="btn btn-primary" (click)="onClickStartSeeking()">Start Seeking</a>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+<div id="row" *ngIf="toggleGiving">
+    <app-give></app-give>
+</div>
+
+<div id="row" *ngIf="toggleSeeking">
+  <app-seek></app-seek>
 </div>
