@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class DataService {
 
-   apiUrl = 'https://giveseek.appspot.com/give';
+   apiUrl = 'http://giveseek.appspot.com/give';
   // apiUrl = 'http://localhost:3000/give';
   constructor(private _http: HttpClient) { }
 
