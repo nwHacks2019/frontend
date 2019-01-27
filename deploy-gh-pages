@@ -1,4 +1,4 @@
-git #!/bin/bash
+#!/bin/bash
 
 echo "Building page for deployment..."
 ng build --prod --output-path docs --base-href /frontend/
