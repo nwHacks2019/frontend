@@ -1,4 +1,4 @@
-# nwHacks 2019: Backend
+# nwHacks 2019: Front End
 
 Angular 7.2.3 website for the Give+Seek application.
 
