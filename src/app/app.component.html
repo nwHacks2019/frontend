@@ -34,13 +34,12 @@
         </div>
 </div>
 
-<div id="row" *ngIf="toggleGiving">
-    <app-give></app-give>
+<div id="givingDisplay" *ngIf="toggleGiving">
+  <app-give></app-give>
 </div>
 
-<div id="row" *ngIf="toggleSeeking">
+<div id="seekingDisplay" *ngIf="toggleSeeking">
   <app-seek></app-seek>
 </div>
 
-<!-- FOOTER COMPONENT -->
 <app-footer></app-footer>
