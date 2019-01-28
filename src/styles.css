@@ -1,17 +1,13 @@
-.container-fluid {
-  background-color: #EFEFEF;
+a {
+  color: #19ADAD !important;
 }
 
-.page-footer {
+.container-fluid {
   background-color: #EFEFEF;
 }
 
 .card {
   background-color: #D8EDED;
-}
-
-a {
-  color: #19ADAD !important;
 }
 
 .btn {
