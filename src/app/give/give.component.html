@@ -6,7 +6,7 @@
           <h2>What will you give today?</h2>
           <br>
           <h5>List your item here. Your giving will be matched by someone in urgent need of that item.</h5>
-            
+
           <form #giverForm="ngForm" novalidate (ngSubmit)="onSubmit()">
           <!-- <form id="contact-form" method="post" action="contact.php" role="form"> -->
            <!-- {{ giverForm.value | json}} -->
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-        
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -47,8 +47,8 @@
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
-                    
-                    
+
+
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Agree to our terms and conditions.</label>
@@ -65,7 +65,7 @@
                 </div>
             </form>
         </div>
-        
+
       </div>
 </div>
 
@@ -81,7 +81,7 @@
     </div>
 </div>
 
-    
+
 
 
 <!-- HACKED END -->
@@ -89,10 +89,10 @@
 <!-- USING SERVER -->
 <!-- <div class="container-fluid">
     <div class="col-xs-6">
-        <h3 align="center">Today, you gave...</h3>  
+        <h3 align="center">Today, you gave...</h3>
         <div *ngFor="let giverInfo of giveInfo$?.data">
             <ul class="list-group">
-                    {{giverInfo}} 
+                    {{giverInfo}}
                 <li class="list-group-item">{{giverInfo | json}} </li>
             </ul>
         </div>
@@ -111,6 +111,3 @@
       </div>
   </div>
 </div>
-
-
-
