@@ -1,8 +1,15 @@
+.header-image {
+  margin: auto;
+  width: 100%;
+  background-size: cover;
+}
+
 .row {
   max-width: 80em;
+  /* margin-top: 30px; */
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px;
+  padding: 50px 20px 0px;
 }
 
 #givingDisplay {
