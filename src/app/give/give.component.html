@@ -71,7 +71,7 @@
 
 <!-- HACKED TOGETHER -->
 <div class="container-fluid">
-    <div class="col-xs-6">
+    <div class="col-xs-6 data-display">
         <h3 align="center">Today, you gave...</h3>
         <div *ngFor="let giverArray of giverArrayHack">
             <ul class="list-group" *ngFor="let giverArray of giverArrayHack">
@@ -101,8 +101,8 @@
 
 
 <!-- USING SERVER END -->
-<div class="container-fluid">
-  <div class="col-xs-6">
+<div class="container-fluid" id="uh">
+  <div class="col-xs-6 data-display">
       <h3 align="center">Others have given... </h3>
       <div *ngFor="let info of Infos$">
           <ul class="list-group">
