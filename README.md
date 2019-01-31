@@ -1,5 +1,7 @@
 # nwHacks 2019: Front End
 
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/nwHacks2019/frontend/blob/master/LICENSE)
+
 Angular 7.2.3 website for the Give+Seek application.
 
 ## Setup
