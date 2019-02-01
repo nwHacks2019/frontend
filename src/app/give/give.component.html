@@ -3,7 +3,7 @@
     <div class="row">
       <div class="container-fluid bg-light py-3">
           <br>
-          <h2>What will you give today?</h2>
+          <h2>What can you give today?</h2>
           <br>
           <h5>List your item here. Your giving will be matched by someone in urgent need of that item.</h5>
 
@@ -43,7 +43,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_message">Item *</label>
-                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Item you are giving" rows="4" required="required" data-error="You must provide an item."></textarea>
+                            <input id="form_message" type="text" [(ngModel)]="userModel.item" name="message" class="form-control" placeholder="What can you give today?" required="required" data-error="You must provide an item.">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
