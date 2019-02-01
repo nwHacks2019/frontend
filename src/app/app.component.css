@@ -4,28 +4,20 @@
   background-size: cover;
 }
 
-.row {
-  max-width: 80em;
-  /* margin-top: 30px; */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 50px 20px 0px;
-}
-
 .card-title-emph {
   color: #19ADAD;
 }
 
-#givingDisplay {
-  max-width: 60em;
+.row, .requests-display {
+  max-width: 80em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px;
 }
 
-#seekingDisplay {
-  max-width: 60em;
-  margin-left: auto;
-  margin-right: auto;
+.row {
+  padding: 50px 0px 0px;
+}
+
+.requests-display {
   padding: 0 20px;
 }
