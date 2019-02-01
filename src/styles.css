@@ -30,3 +30,7 @@ a {
   color: white !important;
   background-color: #19ADAD !important;
 }
+
+.col-sm-4 {
+  padding: 30px 0 0;
+}
