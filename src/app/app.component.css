@@ -4,8 +4,12 @@
   background-size: cover;
 }
 
-.card-title-emph {
+.card-title-emph-give {
   color: #19ADAD;
+}
+
+.card-title-emph-seek {
+  color: #FDC010;
 }
 
 .row, .requests-display {

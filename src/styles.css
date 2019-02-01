@@ -28,18 +28,27 @@ a {
 
 .btn {
   color: white !important;
-  background-color: #19ADAD !important;
   border-radius: 40px !important;
   border: none !important;
   padding: 15px 50px !important;
   font-weight: bold !important;
 }
 
+.btn-give {
+  background-color: #19ADAD !important;
+}
+
+.btn-seek {
+  background-color: #FDC010 !important;
+}
+
+/* Form input */
 .form-control {
   border-radius: 40px !important;
   padding: 20px !important;
 }
 
+/* First line of input form */
 .col-sm-4 {
   padding: 30px 0 0;
 }
