@@ -29,6 +29,9 @@ a {
 .btn {
   color: white !important;
   background-color: #19ADAD !important;
+  border-radius: 40px !important;
+  border: none !important;
+  padding: 10px 35px !important;
 }
 
 .col-sm-4 {
