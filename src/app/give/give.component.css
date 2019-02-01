@@ -1,14 +1,7 @@
 /* Dropdown card */
 .bg-light {
   background-color: #D8EDED !important;
-}
-
-.form-check {
-  padding: 10px 10px 20px 40px;
-}
-
-.form-check-label {
-  padding: 0px 0px 0px 8px;
+  padding: 0px 30px;
 }
 
 .data-display {
