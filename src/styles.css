@@ -31,7 +31,8 @@ a {
   background-color: #19ADAD !important;
   border-radius: 40px !important;
   border: none !important;
-  padding: 10px 35px !important;
+  padding: 15px 50px !important;
+  font-weight: bold !important;
 }
 
 .col-sm-4 {
