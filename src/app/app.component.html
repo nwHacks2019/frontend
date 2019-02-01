@@ -31,12 +31,14 @@
         </div>
 </div>
 
-<div class="requests-display" *ngIf="toggleGiving">
-  <app-give></app-give>
-</div>
+<div class="requests-display-container">
+  <div class="requests-display" *ngIf="toggleGiving">
+    <app-give></app-give>
+  </div>
 
-<div class="requests-display" *ngIf="toggleSeeking">
-  <app-seek></app-seek>
+  <div class="requests-display" *ngIf="toggleSeeking">
+    <app-seek></app-seek>
+  </div>
 </div>
 
 <app-footer></app-footer>
