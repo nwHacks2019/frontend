@@ -15,21 +15,21 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_name">Name *</label>
-                                <input id="form_name" type="text" name="name" [(ngModel)]="userModel.user_name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                                <input id="form_name" type="text" name="name" [(ngModel)]="userModel.user_name" class="form-control" placeholder="Please enter your name" required="required" data-error="Your name is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" [(ngModel)]="userModel.user_email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" name="email" [(ngModel)]="userModel.user_email" class="form-control" placeholder="Please enter your email" required="required" data-error="A valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_phone">Location</label>
-                                <input id="form_phone" type="text" name="phone" [(ngModel)]="userModel.user_location" class="form-control" placeholder="Please enter your Location *">
+                                <input id="form_phone" type="text" name="phone" [(ngModel)]="userModel.user_location" class="form-control" placeholder="Please enter your location">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_message">Item Required *</label>
-                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
+                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="What are you seeking today?" rows="4" required="required" data-error="You must ask for an item."></textarea>
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
