@@ -1,7 +1,11 @@
 .page-footer {
-  background-color: #EFEFEF;
+  background-color: #A3A6B4;
 }
 
-.footer-description {
+#footer-description {
   font-size: 11pt;
+}
+
+#project-name {
+  color: white !important;
 }
