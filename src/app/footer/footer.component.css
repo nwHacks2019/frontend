@@ -12,36 +12,22 @@
 .column {
   float: left;
   width: 33.33%;
-  padding: 50px 30px 50px 20px;
+}
+
+.column-text {
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto;
+  padding: 40px 50px 50px 50px;
 }
 
 .column-logo {
   padding: 0;
 }
 
-#float-logo {
-  display: inline-block;
-  margin: auto;
-}
-
 #logo {
   max-width: 75%;
   display: block;
   margin: auto;
-  padding: 50px 0 0 0;
-}
-
-b {
-  color: white;
-}
-
-a {
-  color: white !important;
-  font-size: 1.3em !important;
-}
-
-h2 {
-  color: white;
-  font-weight: bold;
-  padding: 0 0 20px 0;
+  padding: 50px 0 60px 0;
 }
