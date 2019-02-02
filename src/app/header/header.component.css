@@ -7,8 +7,10 @@
 
 .header-logo {
   padding: 0px 20px 0px 0px;
+  width: auto;
+  height: 45px;
 }
 
 .nav-item {
-  font-size: 1.1em;
+  font-size: 1em;
 }
