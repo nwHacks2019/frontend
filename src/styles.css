@@ -27,6 +27,7 @@ a {
 }
 
 .btn {
+  background-color: #19ADAD !important;
   color: white !important;
   border-radius: 40px !important;
   border: none !important;
