@@ -1,11 +1,14 @@
+<!-- Collapsed navbar is configured to drop down on click through this:
+  https://medium.com/@tiboprea/build-a-responsive-bootstrap-4-navbar-in-angular-5-without-jquery-c59ad35b007 -->
+
 <div class="container-fluid bg-light" id="navbar">
   <nav class="navbar navbar-expand-lg navbar-light">
     <img class="header-logo" src="assets/logo-horizontal.png" alt="Give+Seek Logo" />
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" (click)=toggleNavbar() data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button> -->
+    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse show" id="navbarSupportedContent" [ngClass]="{'show':navbarOpen}">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
