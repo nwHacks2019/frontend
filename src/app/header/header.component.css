@@ -1,3 +1,10 @@
+#navbar {
+  position: fixed;
+  top: -100px;  /* Hidden by default */
+  transition: top 0.3s;
+  z-index: 1;  /* On top of other elements like form fields */
+}
+
 .header-logo {
   padding: 0px 20px 0px 0px;
 }
