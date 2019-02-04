@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { GiveComponent } from './give/give.component';
 import { SeekComponent } from './seek/seek.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -18,7 +19,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     GiveComponent,
     SeekComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
