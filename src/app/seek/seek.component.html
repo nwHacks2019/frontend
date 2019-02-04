@@ -3,57 +3,57 @@
     <div class="row">
       <div class="container-fluid bg-light py-3">
           <br>
-          <h2>What will you seek today?</h2>
+          <h2>What are you seeking today?</h2>
           <br>
-          <h5>List your item here. Your giving will be matched by someone in urgent need of that item.</h5>
-            
+	  <h5>List what you need here. Your request will be matched by someone who is able to provide.</h5>
+
           <!-- <form id="contact-form" method="post" action="contact.php" role="form"> -->
-            <form #seekerForm="ngForm" novalidate (ngSubmit)="onSubmit()">  
+            <form #seekerForm="ngForm" novalidate (ngSubmit)="onSubmit()">
             <div class="messages"></div>
                 <div class="controls">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_name">Name *</label>
-                                <input id="form_name" type="text" name="name" [(ngModel)]="userModel.user_name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                                <input id="form_name" type="text" name="name" [(ngModel)]="userModel.user_name" class="form-control" placeholder="Please enter your name" required="required" data-error="Your name is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" [(ngModel)]="userModel.user_email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" name="email" [(ngModel)]="userModel.user_email" class="form-control" placeholder="Please enter your email" required="required" data-error="A valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_phone">Location</label>
-                                <input id="form_phone" type="text" name="phone" [(ngModel)]="userModel.user_location" class="form-control" placeholder="Please enter your Location *">
+                                <input id="form_phone" type="text" name="phone" [(ngModel)]="userModel.user_location" class="form-control" placeholder="Please enter your location">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-        
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_message">Item Required *</label>
-                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="send a message."></textarea>
+                            <input id="form_message" type="text" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="What are you seeking today?"  required="required" data-error="You must ask for an item.">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
-                    
-                    
+
+
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Agree to our terms and conditions.</label>
                       </div>
 
                     <div class="col-md-12">
-                        <input type="submit" class="btn btn-primary btn-send" value="Submit your item">
+                        <input type="submit" class="btn btn-primary btn-send btn-seek" value="+ ADD">
                     </div>
                 </div>
                 <div class="row">

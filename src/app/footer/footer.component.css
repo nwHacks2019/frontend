@@ -1,0 +1,33 @@
+.page-footer {
+  background-color: #A3A6B4;
+  font-size: 11pt;
+}
+
+.row {
+  max-width: 80em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+.column-text {
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto;
+  padding: 40px 50px 50px 50px;
+}
+
+.column-logo {
+  padding: 0;
+}
+
+#logo {
+  max-width: 75%;
+  display: block;
+  margin: auto;
+  padding: 50px 0 60px 0;
+}

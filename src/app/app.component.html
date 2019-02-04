@@ -2,46 +2,46 @@
 
 <app-header></app-header>
 
+
+<img class="header-image" src="assets/home-header.png" alt="Give+Seek header image">
+
 <div class="container-fluid">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-           <img src="assets/home-header.png" alt="Give+Seek header image" style="margin:auto; width:100%;">
-          <!-- <h1 class="display-4">Give and Seek, directly.</h1>
-          <p class="lead">Connective givers and seekers. All around the world, in times of need. No catch.</p> -->
-        </div>
-      </div>
-
-
         <div class="row">
+          <a name="display"></a>
+
+          <p id="intro-text"><b>Give+Seek</b> is where we provide unconditionally to those who need assistance and ask without hesitation from those who are kind. A platform for human connection and support when we need it most.</p>
+
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title"><a href="#" color="#19ADAD">Give</a>, with an open heart</h5>
+                <h5 class="card-title"><span class="card-title-emph-give">Give</span>, with an open heart</h5>
                 <p class="card-text">Directly help the people in need.</p>
-                <a href="#" class="btn btn-primary" (click)="onClickStartGiving()">Start Giving</a>
+                <a href="#display" class="btn btn-primary btn-give" (click)="onClickStartGiving()">START GIVING</a>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title"><a href="#">Seek</a>, with no hesitation</h5>
+                <h5 class="card-title"><span class="card-title-emph-seek">Seek</span>, with no hesitation</h5>
                 <p class="card-text">Request essential supplies from people around you.</p>
-                <a href="#" class="btn btn-primary" (click)="onClickStartSeeking()">Start Seeking</a>
+                <a href="#display" class="btn btn-primary btn-seek" (click)="onClickStartSeeking()">START SEEKING</a>
               </div>
             </div>
           </div>
+
         </div>
 </div>
 
-<div id="row" *ngIf="toggleGiving">
+<div id="requests-display-container">
+  <div class="requests-display" *ngIf="toggleGiving">
     <app-give></app-give>
+  </div>
+
+  <div class="requests-display" *ngIf="toggleSeeking">
+    <app-seek></app-seek>
+  </div>
 </div>
 
-<div id="row" *ngIf="toggleSeeking">
-  <app-seek></app-seek>
-</div>
-
-<!-- FOOTER COMPONENT -->
 <app-footer></app-footer>
 

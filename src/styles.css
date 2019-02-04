@@ -1,8 +1,28 @@
-.container-fluid {
-  background-color: #EFEFEF;
+@font-face {
+  font-family: "Avenir Next";
+  src: url(assets/fonts/avenir-next-regular.ttf) format("truetype");
 }
 
-.page-footer {
+@font-face {
+  font-family: "Avenir Next";
+  src: url(assets/fonts/avenir-next-bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+* {
+  font-family: "Avenir Next" !important;
+  font-size: 1em;
+}
+
+a {
+  color: #19ADAD !important;
+}
+
+p {
+  line-height: 1.7rem;
+}
+
+.container-fluid {
   background-color: #EFEFEF;
 }
 
@@ -10,11 +30,39 @@
   background-color: #D8EDED;
 }
 
-a {
-  color: #19ADAD !important;
+.btn {
+  background-color: #19ADAD !important;
+  color: white !important;
+  border-radius: 40px !important;
+  border: none !important;
+  padding: 8px 30px !important;
+  font-weight: bold !important;
 }
 
-.btn {
-  color: white !important;
+.btn-give {
   background-color: #19ADAD !important;
+}
+
+.btn-seek {
+  background-color: #FDC010 !important;
+}
+
+/* Form input */
+.form-control {
+  border-radius: 40px !important;
+  padding: 20px !important;
+}
+
+/* First line of input form */
+.col-sm-4 {
+  padding: 30px 0 0;
+}
+
+/* Input form checkbox */
+.form-check {
+  padding: 10px 10px 20px 35px !important;
+}
+
+.form-check-label {
+  padding: 0px 0px 0px 8px;
 }

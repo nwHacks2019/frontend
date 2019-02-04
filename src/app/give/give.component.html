@@ -3,10 +3,10 @@
     <div class="row">
       <div class="container-fluid bg-light py-3">
           <br>
-          <h2>What will you give today?</h2>
+          <h2>What can you give today?</h2>
           <br>
           <h5>List your item here. Your giving will be matched by someone in urgent need of that item.</h5>
-            
+
           <form #giverForm="ngForm" novalidate (ngSubmit)="onSubmit()">
           <!-- <form id="contact-form" method="post" action="contact.php" role="form"> -->
            <!-- {{ giverForm.value | json}} -->
@@ -17,45 +17,45 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_name">Name *</label>
-                                <input id="form_name" type="text" [(ngModel)]="userModel.user_name" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="name is required.">
+                                <input id="form_name" type="text" [(ngModel)]="userModel.user_name" name="name" class="form-control" placeholder="Please enter your name" required="required" data-error="Your name is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" [(ngModel)]="userModel.user_email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <input id="form_email" type="email" [(ngModel)]="userModel.user_email" name="email" class="form-control" placeholder="Please enter your email" required="required" data-error="A valid email is required.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="form_location">Location</label>
-                                <input id="form_location" type="text" [(ngModel)]="userModel.user_location" name="location" class="form-control" placeholder="Please enter your location*">
+                                <input id="form_location" type="text" [(ngModel)]="userModel.user_location" name="location" class="form-control" placeholder="Please enter your location">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-        
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_message">Item *</label>
-                            <textarea id="form_message" name="message" [(ngModel)]="userModel.item" class="form-control" placeholder="Item you are giving *" rows="4" required="required" data-error="send a message."></textarea>
+                            <input id="form_message" type="text" [(ngModel)]="userModel.item" name="message" class="form-control" placeholder="What can you give today?" required="required" data-error="You must provide an item.">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
-                    
-                    
+
+
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Agree to our terms and conditions.</label>
                       </div>
 
                     <div class="col-md-12">
-                        <input type="submit" class="btn btn-primary btn-send" value="Submit your item">
+                        <input type="submit" class="btn btn-primary btn-send btn-give" value="+ ADD">
                     </div>
                 </div>
                 <div class="row">
@@ -65,13 +65,13 @@
                 </div>
             </form>
         </div>
-        
+
       </div>
 </div>
 
 <!-- HACKED TOGETHER -->
 <div class="container-fluid">
-    <div class="col-xs-6">
+    <div class="col-xs-6 data-display">
         <h3 align="center">Today, you gave...</h3>
         <div *ngFor="let giverArray of giverArrayHack">
             <ul class="list-group" *ngFor="let giverArray of giverArrayHack">
@@ -81,7 +81,7 @@
     </div>
 </div>
 
-    
+
 
 
 <!-- HACKED END -->
@@ -89,10 +89,10 @@
 <!-- USING SERVER -->
 <!-- <div class="container-fluid">
     <div class="col-xs-6">
-        <h3 align="center">Today, you gave...</h3>  
+        <h3 align="center">Today, you gave...</h3>
         <div *ngFor="let giverInfo of giveInfo$?.data">
             <ul class="list-group">
-                    {{giverInfo}} 
+                    {{giverInfo}}
                 <li class="list-group-item">{{giverInfo | json}} </li>
             </ul>
         </div>
@@ -101,8 +101,8 @@
 
 
 <!-- USING SERVER END -->
-<div class="container-fluid">
-  <div class="col-xs-6">
+<div class="container-fluid" id="uh">
+  <div class="col-xs-6 data-display">
       <h3 align="center">Others have given... </h3>
       <div *ngFor="let info of Infos$">
           <ul class="list-group">
@@ -111,6 +111,3 @@
       </div>
   </div>
 </div>
-
-
-

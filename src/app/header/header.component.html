@@ -1,14 +1,20 @@
-<div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Give + Seek</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Collapsed navbar is configured to drop down on click through this:
+  https://medium.com/@tiboprea/build-a-responsive-bootstrap-4-navbar-in-angular-5-without-jquery-c59ad35b007 -->
+
+<div class="container-fluid bg-light" id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <img class="header-logo" src="assets/logo-horizontal.png" alt="Give+Seek Logo" />
+    <button class="navbar-toggler" type="button" (click)=toggleNavbar() data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse show" id="navbarSupportedContent" [ngClass]="{'show':navbarOpen}">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/nwHacks2019" target="_blank">GitHub</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
