@@ -16,6 +16,10 @@
   font-size: 1em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: #19ADAD !important;
 }
