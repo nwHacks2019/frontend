@@ -19,8 +19,9 @@ export class SeekComponent implements OnInit {
   userModel = new SeekPost('', '', '', '', 1 , '', '', '');
   pressSubmit = false;
 
-  constructor(public dialog: MatDialog, private dataService: DataService) { }
+  notifRef: any;
 
+  constructor(public dialog: MatDialog, private dataService: DataService) { }
 
   ngOnInit() {
     return this.dataService.getInfo()
