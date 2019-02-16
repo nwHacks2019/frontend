@@ -12,4 +12,18 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleGiving = false;
+  toggleSeeking = false;
+
+  onClickStartGiving() {
+    this.toggleGiving = !this.toggleGiving;
+    this.toggleSeeking = false;
+    console.log(this.toggleGiving);
+  }
+
+  onClickStartSeeking() {
+    this.toggleSeeking = !this.toggleSeeking;
+    this.toggleGiving = false;
+  }
+
 }
