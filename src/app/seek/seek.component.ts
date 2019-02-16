@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material';
+
 import { Info } from '../info.model';
 import { DataService } from './data.service';
 import { SeekPost } from './seekpost.model';
+import { SeekNotifComponent } from '../seek-notif/seek-notif.component';
 
 @Component({
   selector: 'app-seek',
@@ -16,7 +19,7 @@ export class SeekComponent implements OnInit {
   userModel = new SeekPost('', '', '', '', 1 , '', '', '');
   pressSubmit = false;
 
-  constructor(private dataService: DataService) { }
+  constructor(public dialog: MatDialog, private dataService: DataService) { }
 
 
   ngOnInit() {
@@ -25,6 +28,12 @@ export class SeekComponent implements OnInit {
   }
 
   onSubmit() {
+    this.notifRef = this.dialog.open(SeekNotifComponent, {
+      width: '400px',
+      panelClass: 'custom-notif',
+      backdropClass: 'custom-notif-backdrop',
+    });
+
     console.log(this.userModel);
     this.dataService.postInfo(this.userModel)
      .subscribe(

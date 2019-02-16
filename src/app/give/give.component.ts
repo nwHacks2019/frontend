@@ -29,7 +29,7 @@ export class GiveComponent implements OnInit {
 
    onSubmit() {
      this.notifRef = this.dialog.open(GiveNotifComponent, {
-       width: '350px',
+       width: '400px',
        panelClass: 'custom-notif',
        backdropClass: 'custom-notif-backdrop',
      });

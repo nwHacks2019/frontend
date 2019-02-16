@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { GiveNotifComponent } from './give-notif/give-notif.component';
+import { SeekNotifComponent } from './seek-notif/seek-notif.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -31,10 +32,12 @@ const appRoutes: Routes = [
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    GiveNotifComponent
+    GiveNotifComponent,
+    SeekNotifComponent
   ],
   entryComponents: [
-    GiveNotifComponent
+    GiveNotifComponent,
+    SeekNotifComponent
   ],
   imports: [
     BrowserModule,
