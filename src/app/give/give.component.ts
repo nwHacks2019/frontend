@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material';
 import { Info } from '../info.model';
 import { DataService } from './data.service';
 import { GivePost } from './givepost.model';
-
+import { GiveNotifComponent } from '../give-notif/give-notif.component';
 
 @Component({
   selector: 'app-give',
@@ -15,7 +16,9 @@ export class GiveComponent implements OnInit {
   Infos$: Info[];
   giveInfo$: GivePost[];
 
-  constructor(private dataService: DataService) { }
+  notifRef: any;
+
+  constructor(public dialog: MatDialog, private dataService: DataService) { }
   userModel = new GivePost('', '', '', '', 1 , '', '', '');
   // userModel = new GivePost('Anmol', 'anmol@gmail.com', 'vancouver', 'towls');
   giverArrayHack: string[] = [];
@@ -25,6 +28,12 @@ export class GiveComponent implements OnInit {
    }
 
    onSubmit() {
+     this.notifRef = this.dialog.open(GiveNotifComponent, {
+       width: '350px',
+       panelClass: 'custom-notif',
+       backdropClass: 'custom-notif-backdrop',
+     });
+
      console.log(this.userModel);
      this.dataService.postInfo(this.userModel)
       .subscribe(

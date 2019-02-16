@@ -1,3 +1,5 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 @font-face {
   font-family: "Avenir Next";
   src: url(assets/fonts/avenir-next-regular.ttf) format("truetype");
@@ -65,4 +67,23 @@ p {
 
 .form-check-label {
   padding: 0px 0px 0px 8px;
+}
+
+.custom-notif-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mat-dialog-container {
+  border-radius: 20px !important;
+  padding: 45px !important;
+}
+
+.custom-notif .mat-dialog-title {
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.custom-notif .mat-dialog-content {
+  text-align: center;
 }
