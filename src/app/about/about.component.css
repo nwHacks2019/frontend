@@ -1,0 +1,17 @@
+#about-main {
+  margin: auto;
+  max-width: 45em;
+}
+
+.emph-green {
+  color: #19ADAD;
+}
+
+.emph-yellow {
+  color: #FDC010;
+}
+
+.company-logo {
+  width: 12em;
+  height: auto;
+}
