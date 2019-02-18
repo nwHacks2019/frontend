@@ -19,7 +19,7 @@ import { SeekNotifComponent } from './seek-notif/seek-notif.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'about-us', component: AboutComponent},
+  {path: 'about', component: AboutComponent},
 ];
 
 
