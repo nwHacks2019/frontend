@@ -3,31 +3,12 @@
   font-size: 11pt;
 }
 
-.row {
+.container {
   max-width: 80em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-}
-
-.column-text {
-  display: table-cell;
-  vertical-align: middle;
-  margin: auto;
-  padding: 40px 50px 50px 50px;
-}
-
-.column-logo {
-  padding: 0;
 }
 
 #logo {
   max-width: 75%;
   display: block;
   margin: auto;
-  padding: 80px 0 70px 0;
 }
