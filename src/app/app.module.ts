@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NgxTweetModule } from 'ngx-tweet';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -46,6 +48,7 @@ const appRoutes: Routes = [
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgxTweetModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
