@@ -79,17 +79,37 @@
   <h1 class="py-3">Target Consumers</h1>
 
   <p>
-    We analyze those who are most vulnerable in society - those who rely on social support and whatever jobs they can find. These people may be isolated from those who are not struggling as often, and form groups amongst each other. Given how they are barely able to make enough to live within their means, once in a while they likely find themselves in hard situations with nobody to help.
+    We analyzed those who are most vulnerable in society - those who rely on social support and whatever jobs they can find. These people may be isolated from those who are not struggling as often, and form groups amongst each other. Given how they are barely able to make enough to live within their means, once in a while they likely find themselves in hard situations with nobody to help.
   </p>
   <p>
-    We juxtapose this group of people with those who are more comfortable with their means of life, but still live in the same community. They are likely still less affluent than the average citizen, which gives them the ability to empathize closely with those who undergo temporary hardships. They are afforded the ability to stock up on additional supplies and household items when discounted in stores, and will keep these at home until they are of use.
+    We juxtaposed this group of people with those who are more comfortable with their means of life, but still live in the same community. They are likely still less affluent than the average citizen, which gives them the ability to empathize closely with those who undergo temporary hardships. They are afforded the ability to stock up on additional supplies and household items when discounted in stores, and will keep these at home until they are of use.
   </p>
 
   <h1 class="py-3">Solution</h1>
 
-  Our solution is a web application platform which connects the community in times of need. Those who are able and willing to provide for and support those around them can list items that they have. Those in need can bypass social stigma to ask the community for specific assistance based on their urgent need.
+  <img class="img-fluid d-block mx-auto py-4" src="assets/img/laptops.jpg">
+
+  <p>
+    Our solution is a web application platform which connects the community in times of need. Those who are able and willing to provide for and support those around them can list items that they have. Those in need can bypass social stigma to ask the community for specific assistance based on their urgent need.
+  </p>
+  <p>
+    Whenever someone offers an item which is sought by another person, they are matched with the recipient. After accepting, the giver and seeker connect to exchange the item.
+  </p>
+
+  <h2 class="py-3">User Experience Design</h2>
 
   <ngx-tweet tweetId="1089304075869478912"></ngx-tweet>
+
+  <p>
+    To create the best resultant experience of users, we delved into their needs, perceptions, and ideal interactions.
+  </p>
+  <p>
+    We began by referencing past and current situations such as the people who were affected by government shutdown discussed earlier, and occurrences we would expect to see in everyday life such as international students working multiple jobs to support their tuition and housing. Using this, we built a conceptualization of what types of items and services would be required, as well as how they would naturally and intuitively interact with the application to fulfill their needs.
+  </p>
+
+  <div>
+    <img class="img-fluid d-block mx-auto py-3" src="assets/img/design-board.jpg" alt="Design board">
+  </div>
 
   <h2 class="py-3">User Experience Prototype</h2>
 
@@ -100,7 +120,7 @@
   </p>
 
   <p>
-    To understand how users would navigate and use the web application, we designed a prototype using Adobe XD. This prototype details the user experience through a set of steps arranged sequentially.
+    To visually understand how users would navigate and use the web application, we designed a prototype using <a href="https://www.adobe.com/products/xd.html" target="_blank"><strong>Adobe XD</strong></a>. This prototype details the user experience through a set of steps arranged sequentially.
   </p>
 
   <div class="pb-3">
@@ -138,16 +158,27 @@
     </a>
   </div>
 
+  <p>
+    The front end of the web application is built using <a href="https://angular.io/" target="_blank"><strong>Angular</strong></a>, to create the single-page application with styling and scripting, and <a href="https://getbootstrap.com/" target="_blank"><strong>Bootstrap</strong></a> to provide styling support. These provided a strong and flexible platform on which to build the application.
+  </p>
+  <p>
+    The Home, About, Give Submission, Seek Submission, Give Notification, Seek Notification, Header, and Footer are all individual components assembled to create the final product.
+  </p>
+
   <h3 class="py-3">Server (Node.js & Express)</h3>
 
   <div class="d-block mx-auto py-3" style="text-align: center;">
-    <a href="https://expressjs.com/" target="_blank">
+    <a href="https://nodejs.org/" target="_blank">
       <img class="d-inline px-4 company-logo" src="assets/img/logos/nodejs.png">
     </a>
-    <a href="https://nodejs.org/" target="_blank">
+    <a href="https://expressjs.com/" target="_blank">
       <img class="d-inline px-4 company-logo" src="assets/img/logos/express.png">
     </a>
   </div>
+
+  <p>
+    The back end server was written in <a href="https://nodejs.org/" target="_blank"><strong>Node.js</strong></a> with the <a href="https://expressjs.com/" target="_blank"><strong>Express</strong></a> framework. It provides data storage, processing, and communication in tandem with the front end component.
+  </p>
 
   <h3 class="py-3">Infrastructure (Google Cloud Platform & Google App Engine)</h3>
 
@@ -156,24 +187,50 @@
       <img class="d-inline px-4 company-logo" src="assets/img/logos/google-cloud-platform.png">
     </a>
     <a href="https://cloud.google.com/appengine/" target="_blank">
-      <img class="d-inline px-4 company-logo" src="assets/img/logos/google-compute-engine.png">
+      <img class="d-inline px-4 company-logo" src="assets/img/logos/google-app-engine.png">
     </a>
   </div>
 
-  <h1 class="py-3">Positioning</h1>
-
-  <h1 class="py-3">Objectives</h1>
-
   <p>
-    The potential of human connection cannot be understated. Those who have need may come to seek for what they need, when they need it most. They seek for kindness from those who have compassion to spare. Those who have resources to help others may give back to the community that cares for them.
+    To host the server, <a href="https://cloud.google.com/" target="_blank"><strong>Google Cloud Platform</strong></a> was chosen.
   </p>
   <p>
-    We are here for each other.
+    A <a href="https://cloud.google.com/appengine/" target="_blank"><strong>Google App Engine</strong></a> instance was utilized to manage the server temporarily for the hackathon but is no longer active. The server is now hosted on <a href="https://www.heroku.com/">Heroku</a> at <a href="https://giveandseek.herokuapp.com/" target="_blank">https://giveandseek.herokuapp.com/</a>.
+  </p>
+  <p>
+    As an unfortunate lesson, we learned that Google App Engine may take approximately 10 minutes to rebuild and redeploy changes due to the requirement of rebuilding multiple layers of an image and transferring the entire image to the server. This is in comparison to a provider like Heroku, which is able to autodeploy upon changes to a remote repository resulting in the server updated and restarted within a minute.
+  </p>
+
+  <h1 class="py-3">Positioning</h1>
+
+  <p>
+    In relation to <a href="https://www.facebook.com/crisisresponse/" target="_blank">Facebook's Crisis Response</a>, this does not attempt to replace social media networks. In addition, <i>Give+Seek</i> does not aim to spread knowledge in the event of an emergency, only provide support for those caught in the situation. A path of future development could be to provide easier access and event-based support, relevant to real-time situations.
+  </p>
+  <p>
+    In relation to <a href="https://www.craigslist.ca" target="_blank">Craigslist</a>, this does not act as a marketplace even though items are exchanged. Those who use the application have no encouragement at any time to seek monetary repayment for their generosity. A path of future development could be to provide redeemable credits for givers on the service and reward them through unique non-monetary means.
+  </p>
+
+  <h1 class="py-3">Objective</h1>
+
+  <img class="img-fluid d-block mx-auto py-4" src="assets/img/team/presenting.jpg">
+
+  <p>
+    The potential of human connection in times of need cannot be understated. During tragedies or emergencies we mobilized when given the opportunity to help others, but every day people's lives and well-being are still at stake. We can still be there to help them, and to provide the community with ways to help each other - and that is the key objective of <i>Give+Seek</i>.
+  </p>
+  <p>
+    Those who have need may come to seek for what they need, when they need it most. They seek for kindness from those who have compassion to spare. Those who have resources to help others may give back to the community that cares for them.
+  </p>
+  <p>
+    <i>We are here for each other - as a community.</i>
   </p>
 
   <h1 class="py-3">About the Team</h1>
 
-  <p>This project was built by Carol Chan, Carmen Yang, Anmol Bajaj, and Jeffrey Leung.</p>
+  <p>
+    This project was built by <a href="https://github.com/anmolbajajnet">Anmol Bajaj</a>, <a href="https://github.com/jleung51">Jeffrey Leung</a>, <a href="https://github.com/carolchaan">Carol Chan</a>, and <a href="https://github.com/cyang22w">Carmen Yang</a>.
+  </p>
+
+  <img class="img-fluid d-block mx-auto py-2" src="assets/img/team/group.jpg">
 
   <hr>
 
