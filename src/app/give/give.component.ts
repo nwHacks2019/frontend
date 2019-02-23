@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material';
 import { Info } from '../info.model';
 import { DataService } from './data.service';
-import { GivePost } from './givepost.model';
+import { GiveSeekRequest } from '../data-model/giveseekrequest.model';
 import { GiveNotifComponent } from '../give-notif/give-notif.component';
 
 @Component({
@@ -14,7 +14,7 @@ import { GiveNotifComponent } from '../give-notif/give-notif.component';
 export class GiveComponent implements OnInit {
 
   Infos: Info[];
-  giveInfo$: GivePost[];
+  giveInfo$: GiveSeekRequest[];
 
   notifRef: any;
 
@@ -22,7 +22,7 @@ export class GiveComponent implements OnInit {
     this.giveInfo$ = [];
   }
 
-  userModel = new GivePost('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Towels', 1);
+  userModel = new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Towels', 1);
   
   ngOnInit() {
     console.log('Requesting GET /give');

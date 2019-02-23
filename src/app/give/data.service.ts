@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Info } from '../info.model';
-import { GivePost } from './givepost.model';
+import { GiveSeekRequest } from '../data-model/giveseekrequest.model';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -17,8 +17,8 @@ export class DataService {
     return this._http.get<Info[]>(this.apiUrl);
   }
 
-  postInfo(givePost: GivePost) {
-    return this._http.post<GivePost>(this.apiUrl, givePost);
+  postInfo(req: GiveSeekRequest) {
+    return this._http.post<GiveSeekRequest>(this.apiUrl, req);
   }
 
 

@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material';
 
 import { Info } from '../info.model';
 import { DataService } from './data.service';
-import { SeekPost } from './seekpost.model';
+import { GiveSeekRequest } from '../data-model/giveseekrequest.model';
 import { SeekNotifComponent } from '../seek-notif/seek-notif.component';
 
 @Component({
@@ -16,12 +16,14 @@ export class SeekComponent implements OnInit {
 
   Infos$: Info[];
   seekInfos$: Info[];
-  userModel = new SeekPost('', '', '', '', 1 , '', '', '');
+  userModel = new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Towels', 1);
   pressSubmit = false;
 
   notifRef: any;
 
-  constructor(public dialog: MatDialog, private dataService: DataService) { }
+  constructor(public dialog: MatDialog, private dataService: DataService) {
+    this.seekInfos$ = [];
+  }
 
   ngOnInit() {
     return this.dataService.getInfo()
@@ -35,14 +37,20 @@ export class SeekComponent implements OnInit {
       backdropClass: 'custom-notif-backdrop',
     });
 
+    this.pressSubmit = !this.pressSubmit;
+
+    console.log('Requesting POST /seek');
     console.log(this.userModel);
     this.dataService.postInfo(this.userModel)
-     .subscribe(
-      //  data => console.log('Success!', data));
-        data => this.seekInfos$ = data);
-       // error => console.log('Error', error)
-        // );
-      this.pressSubmit = !this.pressSubmit;
+      .subscribe(
+        data => {
+          let newPost = this.userModel.copy();
+          newPost.id = data['id'];
+          this.seekInfos$.push(newPost)
+          console.log('Added to list with data from POST /seek:');
+          console.log(newPost);
+        }
+      );
   }
 
 }

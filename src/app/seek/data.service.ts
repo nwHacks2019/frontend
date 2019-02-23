@@ -15,7 +15,7 @@ export class DataService {
     return this._http.get<Info[]>(this.apiUrl);
   }
   postInfo(seekPost: Info) {
-    return this._http.post<Info[]>(this.apiUrl, seekPost);
+    return this._http.post<Info>(this.apiUrl, seekPost);
   }
 
 }

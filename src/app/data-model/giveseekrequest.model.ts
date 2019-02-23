@@ -1,4 +1,4 @@
-export class GivePost {
+export class GiveSeekRequest {
 
     user_name: string;
     user_email: string;
@@ -24,7 +24,7 @@ export class GivePost {
     };
 
     copy() {
-        let cpy = new GivePost(
+        let cpy = new GiveSeekRequest(
             this.user_name,
             this.user_email,
             this.user_location,
