@@ -13,7 +13,7 @@ import { GiveNotifComponent } from '../give-notif/give-notif.component';
 })
 export class GiveComponent implements OnInit {
 
-  Infos$: Info[];
+  Infos: Info[];
   giveInfo$: GivePost[];
 
   notifRef: any;
@@ -23,9 +23,14 @@ export class GiveComponent implements OnInit {
   // userModel = new GivePost('Anmol', 'anmol@gmail.com', 'vancouver', 'towls');
   giverArrayHack: string[] = [];
   ngOnInit() {
-    return this.dataService.getInfo()
-    .subscribe(data => this.Infos$ = data);
-   }
+    console.log('Requesting GET /gives');
+    this.dataService.getInfo()
+      .subscribe((data: Info[]) => {
+        this.Infos = data;
+        console.log('Results from GET /gives:');
+        console.log(this.Infos);
+      });
+  }
 
    onSubmit() {
      this.notifRef = this.dialog.open(GiveNotifComponent, {
@@ -34,7 +39,6 @@ export class GiveComponent implements OnInit {
        backdropClass: 'custom-notif-backdrop',
      });
 
-     console.log(this.userModel);
      this.dataService.postInfo(this.userModel)
       .subscribe(
         // response => console.log('Success!', data),
@@ -42,6 +46,5 @@ export class GiveComponent implements OnInit {
         // error => console.log('Error', error)
         // );
       this.giverArrayHack.push(this.userModel.item);
-      console.log(this.Infos$);
    }
 }

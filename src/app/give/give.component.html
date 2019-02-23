@@ -103,11 +103,11 @@
 <!-- USING SERVER END -->
 <div class="container-fluid" id="uh">
   <div class="col-xs-6 data-display">
-      <h3 align="center">Others have given... </h3>
-      <div *ngFor="let info of Infos$">
-          <ul class="list-group">
-              <li class="list-group-item">{{ info.item }}</li>
-          </ul>
-      </div>
+      <h3 style="text-align: center;">Others have given...</h3>
+      <ul class="list-group" *ngFor="let Info of Infos">
+          <li class="list-group-item list-group-item success" *ngIf="Info.item">
+              {{Info.item}} ({{Info.quantity}})
+          </li>
+      </ul>
   </div>
 </div>

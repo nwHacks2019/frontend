@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class DataService {
 
-   apiUrl = 'http://giveseek.appspot.com/give';
+   apiUrl = 'https://giveandseek.herokuapp.com/give';
   // apiUrl = 'http://localhost:3000/give';
   constructor(private _http: HttpClient) { }
 

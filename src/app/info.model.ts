@@ -9,7 +9,7 @@
 //   }
 
 
-export class Info {
+export interface Info {
     user_name: string;
     user_email: string;
     user_location: string;

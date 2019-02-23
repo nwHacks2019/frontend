@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   onClickStartGiving() {
     this.toggleGiving = !this.toggleGiving;
     this.toggleSeeking = false;
-    console.log(this.toggleGiving);
+    console.log(`Giving (vs. Seeking): ${this.toggleGiving}`);
   }
 
   onClickStartSeeking() {

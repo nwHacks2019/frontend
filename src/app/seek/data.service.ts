@@ -7,7 +7,7 @@ import { Info } from '../info.model';
 })
 export class DataService {
 
-  apiUrl = 'http://giveseek.appspot.com/ask';
+  apiUrl = 'https://giveandseek.herokuapp.com/ask';
   // apiUrl = 'http://localhost:3000/ask';
   constructor(private _http: HttpClient) { }
 
