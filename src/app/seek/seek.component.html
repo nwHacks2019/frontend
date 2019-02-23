@@ -69,7 +69,13 @@
       </div>
 </div>
 
-
-<!-- <div *ngFor="let info of Infos$">
-  {{ info.id }}
-</div> -->
+<div class="container-fluid pt-5">
+    <div class="col-xs-6 data-display">
+        <h3 style="text-align: center;">You are seeking for...</h3>
+        <ul class="list-group" *ngFor="let info of seekInfos$">
+            <li class="list-group-item list-group-item success" *ngIf="info.item">
+                {{info.item}}
+            </li>
+        </ul>
+    </div>
+</div>
