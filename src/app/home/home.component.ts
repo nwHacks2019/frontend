@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private meta: Meta) {
+    this.meta.addTags([
+      {name: "og:title", content: "Give+Seek"},
+      {name: "og:image", content: "assets/img/logos/logo.png"},
+      {name: "og:description", content: "A platform for human connection and support when we need it most. Project for nwHacks 2019."}
+    ]);
+  }
 
   ngOnInit() {
   }
