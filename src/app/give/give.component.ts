@@ -13,12 +13,21 @@ import { GiveNotifComponent } from '../give-notif/give-notif.component';
 })
 export class GiveComponent implements OnInit {
 
-  Infos: Info[];
+  private gaveByOthersSamples = [
+    new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Soap bars', 5),
+    new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Cans of food', 3),
+    new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Fruit', 10),
+    new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Bags of rice', 1),
+    new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'T-shirts', 2)
+  ];
+
+  Infos: GiveSeekRequest[];
   giveInfo$: GiveSeekRequest[];
 
   notifRef: any;
 
   constructor(public dialog: MatDialog, private dataService: DataService) {
+    this.Infos = this.gaveByOthersSamples;
     this.giveInfo$ = [];
   }
 
@@ -27,10 +36,10 @@ export class GiveComponent implements OnInit {
   ngOnInit() {
     console.log('Requesting GET /give');
     this.dataService.getInfo()
-      .subscribe((data: Info[]) => {
-        this.Infos = data;
+      .subscribe((data: GiveSeekRequest[]) => {
+        this.Infos = this.gaveByOthersSamples.concat(data);
         console.log('Results from GET /give:');
-        console.log(this.Infos);
+        console.log(data);
       });
   }
 

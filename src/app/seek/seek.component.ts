@@ -22,6 +22,7 @@ export class SeekComponent implements OnInit {
   notifRef: any;
 
   constructor(public dialog: MatDialog, private dataService: DataService) {
+    let info = new GiveSeekRequest('Anmol Bajaj', 'anmol@gmail.com', 'Vancouver', 'Towels', 1);
     this.seekInfos$ = [];
   }
 
