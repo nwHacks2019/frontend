@@ -69,38 +69,17 @@
       </div>
 </div>
 
-<!-- HACKED TOGETHER -->
 <div class="container-fluid">
     <div class="col-xs-6 data-display">
-        <h3 align="center">Today, you gave...</h3>
-        <div *ngFor="let giverArray of giverArrayHack">
-            <ul class="list-group" *ngFor="let giverArray of giverArrayHack">
-                <!-- <li class="list-group-item list-group-item-success">{{ giverArray }}</li> -->
-            </ul>
-        </div>
+        <h3 style="text-align: center;">Today, you gave...</h3>
+        <ul class="list-group" *ngFor="let yourGive of giveInfo$">
+            <li class="list-group-item list-group-item success" *ngIf="yourGive.item">
+                {{yourGive.item}} ({{yourGive.quantity}})
+            </li>
+        </ul>
     </div>
 </div>
 
-
-
-
-<!-- HACKED END -->
-
-<!-- USING SERVER -->
-<!-- <div class="container-fluid">
-    <div class="col-xs-6">
-        <h3 align="center">Today, you gave...</h3>
-        <div *ngFor="let giverInfo of giveInfo$?.data">
-            <ul class="list-group">
-                    {{giverInfo}}
-                <li class="list-group-item">{{giverInfo | json}} </li>
-            </ul>
-        </div>
-    </div>
-  </div> -->
-
-
-<!-- USING SERVER END -->
 <div class="container-fluid" id="uh">
   <div class="col-xs-6 data-display">
       <h3 style="text-align: center;">Others have given...</h3>

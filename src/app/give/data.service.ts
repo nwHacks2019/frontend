@@ -18,7 +18,7 @@ export class DataService {
   }
 
   postInfo(givePost: GivePost) {
-    return this._http.post<GivePost[]>(this.apiUrl, givePost);
+    return this._http.post<GivePost>(this.apiUrl, givePost);
   }
 
 
