@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/nwHacks2019/frontend/blob/master/LICENSE)
 
-Angular 7.2.3 website for Give+Seek, a platform for human connection and support when we need it most.
+Angular 7.2.3 website for Give+Seek is a platform for human connection and support.
 
 View the website here: https://nwhacks2019.github.io/frontend/
 
@@ -17,7 +17,7 @@ To set up the website locally, run:
 ng serve
 ```
 
-And open the website at http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Next, open the website at http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## Deployment
 
